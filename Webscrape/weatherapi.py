@@ -4,9 +4,9 @@ import requests
 import re
 import json
 from tqdm import tqdm
-# load dot env
+import os
 
-key = '5c6c1f6f2a3247889e1171417201607'
+key = os.getenv('API_KEY')
 
 base = 'http://api.weatherapi.com/v1/'
 
