@@ -4,6 +4,7 @@ import requests
 import re
 import json
 from tqdm import tqdm
+# load dot env
 
 key = '5c6c1f6f2a3247889e1171417201607'
 
