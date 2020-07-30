@@ -5,6 +5,9 @@ import re
 import json
 from tqdm import tqdm
 import os
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path='.env')
 
 key = os.getenv('API_KEY')
 

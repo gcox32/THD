@@ -14,13 +14,13 @@ Most of the time is spent sitting in a comfortable position and there is frequen
 - Comfortable with both classical machine learning methods as well as deep learning
 - Strong foundation of statistical methods / probability theory
 - Previous industry experience with (2) or more of the following;
-- Anomaly Detection
-- Similarity Detection
-- Entity Recognition & Entity Resolution
-- Multivariate Forecasting
-- Data Standardization
-- Data Imputation
-- Extreme label classification <br>
+    - Anomaly Detection
+    - Similarity Detection
+    - Entity Recognition & Entity Resolution
+    - Multivariate Forecasting
+    - Data Standardization
+    - Data Imputation
+    - Extreme label classification <br>
 
 Ability to convey complex or technical ideas and processes in easy-to-understand terms to diverse audiences<br>
 Excellent written and verbal communication skills<br>
