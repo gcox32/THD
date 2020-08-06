@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 import tweepy
-import jsonpickle
 import json
 
 # retrieve twitter api credentials
@@ -17,8 +16,7 @@ auth = tweepy.AppAuthHandler(APIKEY, SECRET)
 
 api = tweepy.API(auth, 
                 wait_on_rate_limit=True, 
-                wait_on_rate_limit_notify=True, 
-                # parser=tweepy.parsers.JSONParser()
+                wait_on_rate_limit_notify=True,
                 )
 
 if not api:
@@ -28,7 +26,7 @@ else:
     print('Success!')
 
 # search
-searchQuery = '#homedepot'
+searchQuery = '#homedepot -filter:retweets'
 maxTweets = 20000
 tweetsPerQry = 100
 fName = 'tweets.json'
