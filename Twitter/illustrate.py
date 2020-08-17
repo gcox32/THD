@@ -32,7 +32,7 @@ df = pd.DataFrame({'created_at':date_list,
 stopwords = nltk.corpus.stopwords.words('english')
 
 # IMPORTANT: add search text specific language to filter out (variations on search terms that are unhelpful)
-stopwords = stopwords + ['homedepot','@homedepot','amp;','home depot','depot',]
+stopwords = stopwords + ['homedepot','bayer','roundup','amp;','home depot','depot',]
 
 RE_stopwords = r'\b(?:{})\b'.format('|'.join(stopwords))
 replacements = [r'\u2026',r'\#',r'\|',r'\&',r'\-',r'\.',r'\,',r'\'',r'\@','amp;',RE_stopwords]
