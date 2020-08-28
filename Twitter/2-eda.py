@@ -59,5 +59,4 @@ wordcloud = WordCloud(max_font_size=60, max_words=100, width=480, height=380,col
 
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
-plt.figure(figsize=[10,10])
 plt.show()

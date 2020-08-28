@@ -26,7 +26,7 @@ else:
     print('Success!')
 
 # search
-searchQuery = 'bayer roundup -filter:retweets'
+searchQuery = 'homedepot -filter:retweets'
 maxTweets = 20000
 tweetsPerQry = 100
 fName = 'tweets.json'
