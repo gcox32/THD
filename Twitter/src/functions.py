@@ -1,4 +1,5 @@
 import nltk
+import os
 
 def check_nltk_downloads(basepath = '/Users/administrator/nltk_data/'):
 
