@@ -6,6 +6,9 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import random
 import matplotlib.pyplot as plt
 
+# uncomment following line for first time
+# nltk.download('stopwords')
+
 # load in json data
 file_loc = 'tweets.json'
 with open(file_loc, 'r') as f:
@@ -28,6 +31,8 @@ df = pd.DataFrame({'created_at':date_list,
                     'sentiment':0.0, 
                     'subjectivity':0.0,
                     'polarity':0.0,})
+
+df.to_csv('tweetsdf.csv', index=False)
 
 stopwords = nltk.corpus.stopwords.words('english')
 
