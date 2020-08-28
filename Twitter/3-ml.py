@@ -2,7 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 import nltk
-from .src.functions import check_nltk_downloads, lemmatize_sentence
+from src.functions import check_nltk_downloads, lemmatize_sentence
 
 check_nltk_downloads()
 
@@ -15,7 +15,9 @@ text = twitter_samples.strings('tweets.20150430-223406.json') #20k tweets
 
 tweet_tokens = twitter_samples.tokenized('positive_tweets.json')
 
+df = pd.read_csv('tweetsdf.csv')
 
-# df = pd.read_csv('tweetsdf.csv')
+from nltk.tokenize import TweetTokenizer
+tweet_tokenizer = TweetTokenizer(preserve_case=False, strip_handles=True, reduce_len=True)
 
-
+print(tweet_tokenizer.tokenize(df['text'][0]))
