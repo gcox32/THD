@@ -62,3 +62,10 @@ if __name__ == "__main__":
     custom_tokens = remove_noise(word_tokenize(custom_tweet))
 
     print(classifier.classify(dict([token, True] for token in custom_tokens)))
+
+    # save model for later use with pickle
+    import pickle
+
+    filename = 'models/tweetclassifier.sav'
+    pickle.dump(classifier, 
+                open(filename, 'wb'))
