@@ -1,9 +1,11 @@
+<h1>THD</h1>
+
 **MINIMUM QUALIFICATIONS**<br>
-Must be eighteen years of age or older.<br>
-Must be legally permitted to work in the United States.<br>
+- Must be eighteen years of age or older.
+- Must be legally permitted to work in the United States.<br>
 **Additional Minimum Qualifications:**<br>
 Education Required:<br>
-The knowledge, skills and abilities typically acquired through the completion of a bachelor’s degree program or equivalent degree in a field of study related to the job.<br>
+- The knowledge, skills and abilities typically acquired through the completion of a bachelor’s degree program or equivalent degree in a field of study related to the job.<br>
 Years of Relevant Work Experience: 2 years<br>
 **Physical Requirements:**<br>
 Most of the time is spent sitting in a comfortable position and there is frequent opportunity to move about. On rare occasions there may be a need to move or lift light articles.<br>
