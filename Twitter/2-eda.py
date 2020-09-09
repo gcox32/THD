@@ -32,7 +32,7 @@ df = pd.DataFrame({'created_at':date_list,
                     'subjectivity':0.0,
                     'polarity':0.0,})
 
-df.to_csv('tweetsdf.csv', index=False)
+df.to_csv('data/tweetsdf.csv', index=False)
 
 stopwords = nltk.corpus.stopwords.words('english')
 

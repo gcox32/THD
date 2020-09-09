@@ -1,6 +1,7 @@
 import nltk
 import os
 
+
 def check_nltk_downloads(basepath = '/Users/administrator/nltk_data/'):
 
     print('Checking for nltk resources...')
@@ -61,4 +62,20 @@ def get_all_words(cleand_tokens_list):
 def get_tweets_for_model(cleaned_tokens_list):
     for tweet_tokens in cleaned_tokens_list:
         yield dict([token, True] for token in tweet_tokens)
-        
+
+from nltk.tokenize import word_tokenize
+def pipeline(tweet):
+    tokens = word_tokenize(tweet)
+    cleaned_tokens = remove_noise(tweet)
+    cleaned_inputs = dict([token, True] for token in cleaned_tokens)
+    return cleaned_inputs
+
+from nltk.sentiment.util import mark_negation, extract_unigram_feats
+from nltk.sentiment import SentimentAnalyzer
+from nltk.classify import NaiveBayesClassifier
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+def addfeatures(cleaned_tokens_list):
+    sentim_analyzer = SentimentAnalyzer()
+    all_words_neg = sentim_analyzer.all_words([mark_negation(token_list) for token_list in cleaned_tokens_list])
+    unigram_feats = sentim_analyzer.unigram_word_feats(all_words_neg, min_freq=4)
+    sentim_analyzer.add_feat_extractor(extract_unigram_feats, unigrams=unigram_feats)

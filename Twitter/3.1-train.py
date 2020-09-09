@@ -13,6 +13,7 @@ from nltk.tokenize import word_tokenize
 
 if __name__ == "__main__":
     
+    print('Loading in data...')
     pos_tokens = twitter_samples.tokenized('positive_tweets.json') #5k tweets
     neg_tokens = twitter_samples.tokenized('negative_tweets.json') #5k tweets
     neutral_tokens = twitter_samples.tokenized('tweets.20150430-223406.json') #20k tweets
@@ -22,6 +23,7 @@ if __name__ == "__main__":
     neutral_cleaned_tokens_list = []
 
     # remove noise and incorporate normalization and lemmatization
+    print('Cleaning data...')
     for tokens in pos_tokens:
         positive_cleaned_tokens_list.append(remove_noise(tokens, stop_words=stop_words))
     for tokens in neg_tokens:
@@ -30,6 +32,7 @@ if __name__ == "__main__":
         neutral_cleaned_tokens_list.append(remove_noise(tokens, stop_words = stop_words))
 
     # convert tweets from list of cleaned tokens to dictionary with token:True as key:value
+    print('Converting tweets to tokens...')
     pos_tokens_for_model = get_tweets_for_model(positive_cleaned_tokens_list)
     neg_tokens_for_model = get_tweets_for_model(negative_cleaned_tokens_list)
 
@@ -47,7 +50,7 @@ if __name__ == "__main__":
     test_data = dataset[7000:]
 
     # simple classifier
-
+    print('Training data...')
     classifier = NaiveBayesClassifier.train(train_data)
 
     acc = classify.accuracy(classifier, test_data)
@@ -60,7 +63,8 @@ if __name__ == "__main__":
     custom_tweet = "Robinhood is down, yet again. Unreal."
 
     custom_tokens = remove_noise(word_tokenize(custom_tweet))
-
+    print('-'*10, 'Test Model','-'*10)
+    print('Test tweet:',custom_tweet)
     print(classifier.classify(dict([token, True] for token in custom_tokens)))
 
     # save model for later use with pickle

@@ -29,7 +29,7 @@ else:
 searchQuery = 'bayer roundup -filter:retweets'
 maxTweets = 20000
 tweetsPerQry = 100
-fName = 'tweets.json'
+fName = 'data/tweets.json'
 
 # if results from specific ID onwards are required, set since_id to that ID
 # otherwise, default to no lower limit, and go back as far as the API allows
